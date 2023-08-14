@@ -10,7 +10,20 @@ body {
   padding: 1rem;
   margin: 0 auto;
 }
-
+.Navbar{
+  width: 100%;
+}
+.links{
+  width: 100%;
+  display: flex;
+}
+.links>a{
+  margin-left: 15px;
+}
+a{
+  list-style-type: none;
+  color: aliceblue;
+}
 .new-item-form {
   display: flex;
   flex-direction: column;

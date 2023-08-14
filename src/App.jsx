@@ -1,30 +1,28 @@
 
 import "./styles.css"
+import Navbar from "./navbar";
+import Home from "./Home";
+import Form from "./form";
 
-export default function App(){
+function App(){
+   const title='Welcome to the new blog';
+   const like=50;
+   const linkFace="http://www.google.com";
 
-  return <div>
-    <form className="new-item-form">
-           <div className="form-row">
-            <label htmlFor="item">New Item</label>
-            <input type="text" id="item"/>
-           </div>
-           <button className="btn">Add</button>
-  </form>
-  <h1 className="header">Todo List</h1>
-  <ul className="list">
-     <li>
-      <label htmlFor="">
-        <input type="checkbox" /> Item 1 
-      </label>
-      <button className="btn btn-danger">Delete</button>
-     </li>
-     <li>
-      <label htmlFor="">
-        <input type="checkbox" /> Item 1 
-      </label>
-      <button className="btn btn-danger">Delete</button>
-     </li>
-  </ul>
-  </div>
+   return (
+    
+    <div className="App">
+      <Navbar/>
+      <div className="content">
+        <Home/>
+        <h1>{title}</h1>
+        <p>Liked{like} time</p>
+        <a href={linkFace}>Google</a>
+      </div>
+      <Form/>
+    </div>
+   );
+
 }
+
+export default App
