@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 
 import "./styles.css"
 import Navbar from "./navbar";
@@ -14,14 +15,14 @@ function App(){
     
     <div className="App">
       <Navbar/>
-      <div className="content">
-        <Home/>
+       <div className="content">
+       <Home/>
         <h1>{title}</h1>
         <p>Liked{like} time</p>
         <a href={linkFace}>Google</a>
       </div>
       <Form/>
-    </div>
+    </div> 
    );
 
 }
