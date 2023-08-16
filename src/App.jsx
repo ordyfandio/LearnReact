@@ -4,6 +4,7 @@ import Navbar from "./navbar";
 import Home from "./Home";
 import Form from "./form";
 
+
 function App(){
    const title='Welcome to the new blog';
    const like=50;
