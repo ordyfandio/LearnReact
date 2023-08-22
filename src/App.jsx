@@ -4,25 +4,37 @@ import "./styles.css"
 import Navbar from "./navbar";
 import Home from "./Home";
 import Form from "./form";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Create from "./Create";
+import BlogDetails from "./BlogDetails";
 
 
 function App(){
-   const title='Welcome to the new blog';
-   const like=50;
-   const linkFace="http://www.google.com";
+  //  const title='Welcome to the new blog';
+  //  const like=50;
+  //  const linkFace="http://www.google.com";
 
    return (
-    
-    <div className="App">
+    <Router>
+      <div className="App">
       <Navbar/>
        <div className="content">
-       <Home/>
-        <h1>{title}</h1>
+        <Route exact path="/">
+            <Home/>
+        </Route>
+        <Route  path="/Create">
+          <Create/>
+        </Route>
+        <Route  path="/blog/:id">
+          <BlogDetails/>
+        </Route>
+        {/* <h1>{title}</h1>
         <p>Liked{like} time</p>
-        <a href={linkFace}>Google</a>
+        <a href={linkFace}>Google</a> */}
       </div>
-      <Form/>
+      {/* <Form/> */}
     </div> 
+    </Router>
    );
 
 }
