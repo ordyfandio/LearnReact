@@ -12,15 +12,17 @@
       "author": "yoshi",
       "id": 2
     },
-    [
-      "bhvhvjh",
-      "hhchch",
-      "mario"
-    ],
-    [
-      null,
-      null,
-      "mario"
-    ]
+    {
+      "title": "hello",
+      "body": "hello world",
+      "author": "mario",
+      "id": 3
+    },
+    {
+      "title": "Booking",
+      "body": "We need it !",
+      "author": "yoshi",
+      "id": 4
+    }
   ]
 }

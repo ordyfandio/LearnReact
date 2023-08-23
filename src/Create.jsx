@@ -7,11 +7,11 @@ const Create = () => {
     const [author,setAuthor]=useState('mario');
     const [isPending,setIsPending]=useState(false);
     const history=useHistory();
-
+ 
 
     const handleSubmit=(e)=>{
        e.preventDefault();
-       const blog=[title,body,author];
+       const blog={title,body,author};
        
        setIsPending(true);
 
@@ -30,7 +30,17 @@ const Create = () => {
        setBody('');
        setTitle('');
     }
-
+    
+    const handleChangeTitle = (event) => {
+        setTitle(event.target.value);        
+    } 
+    const handleChangeBody = (event) => {
+        setBody(event.target.value);        
+    } 
+    const handleChangeAuthor = (event) => {
+        
+        setAuthor(event.target.value);        
+    }
 
     
    return ( 
@@ -38,15 +48,14 @@ const Create = () => {
             <h2>Add a New Blog</h2>
             <form onSubmit={handleSubmit}>
                 <label>Blog Title</label>
-                <input type="text" required value={title}
-                onChange={(e)=> setTitle(e.target.value)}></input>
+                <input type="text" required value={title} name="title"
+                onChange={handleChangeTitle}></input>
 
                 <label>Blog Body:</label>
-                <textarea required value={body}
-                onChange={(e)=>setBody(e.target.value)}></textarea>
-
+                <textarea required value={body} name="body"
+                onChange={handleChangeBody}></textarea>
                 <label>Blog Author</label>
-                <select value={author} onChange={(e)=>setAuthor(e.target.value)}>
+                <select value={author} name="author" onChange={handleChangeAuthor}>
                     <option value="mario">Mario</option>
                     <option value="yoshi">Yoshi</option>
                 </select>

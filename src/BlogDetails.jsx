@@ -19,7 +19,7 @@ const BlogDetails = () => {
             {isPending && <div>Loading...</div>}
             {error && <div>{error}</div>}
             {blog &&(
-              <article>
+              <article key={blog.id}>
                 <h2>{blog.title}</h2>
                 <div>{blog.body}</div>
                 <p>Written by {blog.author}</p>
