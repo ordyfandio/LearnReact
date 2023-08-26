@@ -6,8 +6,7 @@ const Navbar = () => {
             <h1>The Dojo Blog</h1>
             <div className="links">
               <Link to="/">Home</Link>
-              <Link to ="/create">Services</Link>
-              <Link to="/">About Us</Link>
+              <Link to ="/create">Blogs</Link>
             </div>
         </nav> 
     );
